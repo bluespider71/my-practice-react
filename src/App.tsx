@@ -1,8 +1,10 @@
 import React from 'react';
+import JTP from './JTP ';
 
-function App() {
+function App(props: any) {
+  // const { name } = props;
   const [displayBio, setdisplayBio] = React.useState(false);
-
+  const [name, setname] = React.useState("JavaTpoint");
   const toggleDisplayBio = () => {
     setdisplayBio(!displayBio);
   }
@@ -19,8 +21,14 @@ function App() {
     <>
       <h1> Welcome to JavaTpoint!! </h1>
       {bio}
+      <>{name}</>
+      <JTP jtpProp={name}></JTP>
     </>
   );
 }
+
+// App.defaultProps = {
+//   name: "JavaTpoint"
+// }
 
 export default App;
